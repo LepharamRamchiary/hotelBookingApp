@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
-const { Schema } = mongoose;
+
+// const { Schema } = mongoose;
 
 const RoomSchema = new mongoose.Schema({
-    username: {
-        title: String,
+    title: {
+        type: String,
         required: true,
     },
     price: {
