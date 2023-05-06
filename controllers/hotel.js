@@ -66,7 +66,6 @@ export const countByCity = async (req, res, next) => {
 }
 
 export const countByType = async (req, res, next) => {
-
     try {
         const hotelCount = await Hotel.countDocuments({ type: "hotel" });
         const apartmentCount = await Hotel.countDocuments({ type: "apartment" });
@@ -79,9 +78,9 @@ export const countByType = async (req, res, next) => {
             { type: "apartments", count: apartmentCount },
             { type: "resorts", count: resortCount },
             { type: "villas", count: villaCount },
-            { typr: "cabins", count: cabinCount }
+            { type: "cabins", count: cabinCount }
         ]);
     } catch (err) {
-        next(err)
+        next(err);
     }
 }
